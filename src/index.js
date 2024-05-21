@@ -5,17 +5,22 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Weather from './Weather.jsx';
+import ThemeProvider1 from './ThemeProvider1.jsx';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <ThemeProvider1>
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<Weather/>}/>
 
     </Routes>
     </BrowserRouter>
-    {/* <App /> */}
+   
+    </ThemeProvider1>
   </React.StrictMode>
 );
 
